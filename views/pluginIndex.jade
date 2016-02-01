@@ -1,0 +1,43 @@
+doctype html5
+html
+    head
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/font/flaticon.css")
+
+
+        style(type="text/css").
+            body {
+                background: none !important;
+            }
+            .list-group-horizontal .list-group-item {
+                display: inline-block;
+            }
+            .list-group-horizontal .list-group-item {
+            	margin-bottom: 0;
+            	margin-left:-4px;
+            	margin-right: 0;
+            }
+            .list-group-horizontal .list-group-item:first-child {
+            	border-top-right-radius:0;
+            	border-bottom-left-radius:4px;
+            }
+            .list-group-horizontal .list-group-item:last-child {
+            	border-top-right-radius:4px;
+            	border-bottom-left-radius:0;
+            }
+
+    body
+    .container
+        .row
+            .col-xs-12.text-center
+                .list-group.list-group-horizontal
+                    a.list-group-item(href="/votes/vote/?id=#{id}&value=0")
+                        i.flaticon-doubt3 &nbsp; Meh... (#{data[0]})
+                    a.list-group-item(href="/votes/vote/?id=#{id}&value=1")
+                        i.flaticon-sad35 &nbsp; Incompleto (#{data[1]})
+                    a.list-group-item(href="/votes/vote/?id=#{id}&value=2")
+                        i.flaticon-mute24 &nbsp; Sin palabras (#{data[2]})
+                    a.list-group-item(href="/votes/vote/?id=#{id}&value=3")
+                        i.flaticon-smiling36 &nbsp; Genial (#{data[3]})
+                    a.list-group-item(href="/votes/vote/?id=#{id}&value=4")
+                        i.flaticon-surprised21 &nbsp; Asombroso (#{data[4]})
