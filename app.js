@@ -1,4 +1,4 @@
-/**
+/** Test
  * app.js
  *
  * Use `app.js` to run your app without `sails lift`.
